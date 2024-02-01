@@ -3,6 +3,8 @@ import React, { useState } from "react";
 export const NewRoomForm = (props) => {
   const [name, setName] = useState("");
   const [area, setArea] = useState(undefined);
+  // adding state to show/hide the form
+  const [showForm, setShowForm] = useState(false);
 
   const handleAreaInput = (e) => {
     const int = parseInt(e.target.value, 10);
@@ -23,21 +25,26 @@ export const NewRoomForm = (props) => {
   return (
     <div>
       <h4>Add a new room</h4>
-      <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          placeholder="name"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
-        />
-        <input
-          type="text"
-          placeholder="area"
-          onChange={handleAreaInput}
-          value={area}
-        />
-        <button type="submit">Add Room</button>
-      </form>
+      <button className="mb-1" onClick={() => setShowForm(!showForm)}>
+        {!showForm ? "Add Room" : "Hide Form"}
+      </button>
+      {showForm && (
+        <form onSubmit={onSubmit}>
+          <input
+            type="text"
+            placeholder="name"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+          />
+          <input
+            type="text"
+            placeholder="area"
+            onChange={handleAreaInput}
+            value={area}
+          />
+          <button type="submit">Submit Room</button>
+        </form>
+      )}
     </div>
   );
 };

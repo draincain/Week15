@@ -1,0 +1,27 @@
+.new-house-form {
+  border: 1px solid #ddd; /* Choose your desired border color */
+  padding: 15px; /* Add padding for better visual appearance */
+  border-radius: 5px; /* Add rounded corners */
+  max-width: 400px; /* Set the maximum width of the form */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.house-list {
+  border: 1px solid #ddd; /* Choose your desired border color */
+  padding: 15px; /* Add padding for better visual appearance */
+  border-radius: 5px; /* Add rounded corners */
+  max-width: 400px; /* Set the maximum width of the form */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.listHeader {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.room-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Add margin between list items */
+}

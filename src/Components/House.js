@@ -16,9 +16,9 @@ export const House = (props) => {
     updateHouse({ ...house, rooms: [...house.rooms, room] });
 
   const rooms = () => (
-    <ul>
+    <ul className="list-group mb-3 house-list">
       {house.rooms.map((room, index) => (
-        <li key={index}>
+        <li key={index} className="list-group-item room-list-item">
           <label>{`${room.name} Area: ${room.area}`}</label>
           <button onClick={(e) => deleteRoom(room._id)}>Delete</button>
         </li>
