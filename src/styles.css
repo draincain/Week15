@@ -1,3 +1,7 @@
+#pageBody {
+  background-color: rgb(35, 154, 114);
+}
+
 .new-house-form {
   border: 1px solid #ddd; /* Choose your desired border color */
   padding: 15px; /* Add padding for better visual appearance */
@@ -24,4 +28,10 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px; /* Add margin between list items */
+}
+
+.room-info {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d8cece; /* Custom color for the text */
 }
