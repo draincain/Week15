@@ -1,5 +1,6 @@
 const HOUSES_ENDPOINT = "https://ancient-taiga-31359.herokuapp.com/api/houses";
 
+// Class for interacting with the houses API
 class HousesApi {
   get = async () => {
     try {
@@ -43,4 +44,5 @@ class HousesApi {
   };
 }
 
+// Create an instance of HousesApi
 export const housesApi = new HousesApi();

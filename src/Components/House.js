@@ -1,9 +1,11 @@
 import React from "react";
 import { NewRoomForm } from "./NewRoomForm.js";
 
+// House component responsible for rendering a house and its rooms
 export const House = (props) => {
   const { house, updateHouse } = props;
 
+  // Function to delete a room from the house
   const deleteRoom = (roomId) => {
     const updatedHouse = {
       ...house,
@@ -12,9 +14,11 @@ export const House = (props) => {
     updateHouse(updatedHouse);
   };
 
+  // Function to add a new room to the house
   const addNewRoom = (room) =>
     updateHouse({ ...house, rooms: [...house.rooms, room] });
 
+  // Function to render the list of rooms
   const rooms = () => (
     <ul className="list-group mb-3 house-list">
       {house.rooms.map((room, index) => (

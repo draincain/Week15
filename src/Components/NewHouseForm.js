@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "../styles.css";
 
+// NewHouseForm component for adding a new house
 export const NewHouseForm = (props) => {
   const [name, setName] = useState("");
 
+  // Function to handle form submission
   const onSubmit = (e) => {
     e.preventDefault();
     if (name !== "") {
